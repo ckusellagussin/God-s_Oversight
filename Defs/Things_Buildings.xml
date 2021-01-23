@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<defs>
+<Defs>
 
 <ThingDef ParentName="BedWithQualityBase">
   <defName>CreationChamber</defName>
   <label>Creation Chamber</label>
-  <description>
-    A solid metal chamber made out of Dnaium to keep the resource from leaking out. It's not
+  <description>A solid chamber made out of Dnaium to keep the resource from leaking out. It's not
     comfortable but then again neither will the procedure be.\n\n
     This is where the base of performing a sinful act of altering the DNA happens, God looks
-    down on you as you alter his imperfect creation but then again why is he letting you do it?
-  </description>
+    down on you as you alter his imperfect creation but then again why is he letting you do it?</description>
   <graphicData>
-  </graphicdata>
+    <texPath>Chamber</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <drawSize>(2,2)</drawSize>
+  </graphicData>
   <castEdgeShadows>True</castEdgeShadows>
   <statBases>
     <MaxHitPoints>300</MaxHitPoints>
@@ -21,11 +23,12 @@
     <BedRestEffectiveness>0.2</BedRestEffectiveness>
     <Comfort>0.2</Comfort>
   </statBases>
-  
+  <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+  <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+</ThingDef>
 
 
 
 
 
-
-</defs>
+</Defs>

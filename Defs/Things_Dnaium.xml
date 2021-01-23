@@ -6,11 +6,9 @@
 <label>Dnaium</label>
 <description>A mined version of the meteroite that came from beyond the heavens. This is the final
 stage before getting pure Dnaium which can be put in the refiner to make a Dnaide canister./n
-Now that this element has been taken away from the main vein, the Dnaium is much more fragile and requires
-and requires a frozen area too.
-</description>
+Now that this element has been taken away from the main vein, the Dnaium is much more fragile and requires a frozen area.</description>
 <graphicData>
-  <texPath>Textures/Dnaium</texPath>
+  <texPath>Dnaium</texPath>
   <graphicClass>Graphic_StackCount</graphicClass>
 </graphicData>
 <soundInteract>Metal_Drop</soundInteract>
@@ -23,7 +21,7 @@ and requires a frozen area too.
 <useHitPoints>True</useHitPoints>
 <healthAffectsPrice>True</healthAffectsPrice>
 <stackLimit>100</stackLimit>
-<smeltable>false<false>
+<smeltable>False</smeltable>
 <stuffProps>
   <commonality>0.01</commonality>
   <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
@@ -38,18 +36,16 @@ and requires a frozen area too.
   <Beauty>2</Beauty>
 </statFactors>
 </stuffProps>
-
 </ThingDef>
 
 <ThingDef ParentName="ResourceBase">
   <defName>PureDnaium</defName>
-  <label>Pure Dnaium</defName>
-  <description>
-  Pure Dnaium is the refined version of the Dnanium meteroite. A refiner is needed
-  to make a Dnaide canister which can be used to mutate your pawns.
-  </description>
+  <label>Pure Dnaium</label>
+  <description>Pure Dnaium is the refined version of the Dnanium meteroite. A refiner is needed
+  to make a Dnaide canister which can be used to mutate your pawns.</description>
   <graphicData>
-    <texPath>Textures/Pure_Dnaium</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <texPath>Pure_Dnaium</texPath>
   </graphicData>
   <soundInteract>Silver_Drop</soundInteract>
   <soundDrop>Silver_Drop</soundDrop>
@@ -61,7 +57,7 @@ and requires a frozen area too.
   <useHitPoints>True</useHitPoints>
   <healthAffectsPrice>True</healthAffectsPrice>
   <stackLimit>100</stackLimit>
-  <smeltable>false<false>
+  <smeltable>False</smeltable>
   <stuffProps>
     <commonality>0.01</commonality>
     <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
@@ -76,7 +72,6 @@ and requires a frozen area too.
     <Beauty>2</Beauty>
   </statFactors>
   </stuffProps>
-
 </ThingDef>
 
 
@@ -84,10 +79,9 @@ and requires a frozen area too.
   <defName>MineableDnaium</defName>
   <label>Un-refined Dnaium</label>
   <description>This un-mined resource is what is needed to change pawns into gods or
-    demons. This resource is very rare to find but supplies much needed Dnaium when found.
-  </description>
+    demons. This resource is very rare to find but supplies much needed Dnaium when found.</description>
   <graphicData>
-    <texPath>Textures/Dnaium_Ore</texPath>
+    <texPath>Dnaium/Dnanium_Ore</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
   <statBases>
@@ -101,11 +95,5 @@ and requires a frozen area too.
     <mineableScatterLumpSizeRange>30~40</mineableScatterLumpSizeRange>
 </building>
 </ThingDef>
-
-<ThingDef
-
-
-
-
 
 </Defs>

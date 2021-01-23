@@ -1,2 +1,0 @@
-C:\Users\Casey\Desktop\OpenGl\OpenGl\Debug\OpenGl.exe
-C:\Users\Casey\Desktop\OpenGl\OpenGl\Debug\OpenGl.pdb
