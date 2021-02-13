@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<ResearchProjectDef>
+  <defName>mutancyResearch</defName>
+  <label>Mutancy</label>
+  <description>This is the beginning of the end, Your Colony will discover the origins of the mysterious elements Dnaium and it's gas counterpart-Dnaide-that is in your world along with the mysteries of the strange superbeings that have been appearing. </description>
+  <baseCost>15000</baseCost>
+  <techLevel>Ultra</techLevel>
+  <researchViewX>5.0</researchViewX>
+  <researchViewY>0.0</researchViewY>
+  <prerequisites>
+    <li>MicroelectronicsBasics</li>
+  </prerequisites>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>mutancyBuildings</defName>
+  <label>Mutancy Buildings</label>
+  <description>The colony now knows what Dnaium is and how refining it into a gas is the safest way to to change a pawn. You have researched 2/3 technologies to start experimenting on your pawns as test subjects.</description>
+  <baseCost>10000</baseCost>
+  <techLevel>Ultra</techLevel>
+<researchViewX>3.0</researchViewX>
+<researchViewY>0.0</researchViewY>
+<prerequisites>
+  <li>mutancyResearch</li>
+</prerequisites>
+</ResearchProjectDef>
+
+<ResearchProjectDef>
+  <defName>mutancyRefine</defName>
+  <label>Dnaium Refinery</label>
+  <description>The refinery is needed for turning Dnaium into Dnaide so it can be compressed into a Dnaide Canister that is all ready to be injected into your test subject</description>
+  <baseCost>8000</baseCost>
+  <techLevel>Ultra</techLevel>
+<researchViewX>3.0</researchViewX>
+<researchViewY>0.0</researchViewY>
+<prerequisites>
+  <li>mutancyBuildings</li>
+</prerequisites>
+</ResearchProjectDef>
+
+</Defs>
