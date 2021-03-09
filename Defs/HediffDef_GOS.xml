@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<HediffDef ParentName="DiseaseBase">
+  <defName>dnaideSickness</defName>
+  <label>Dnaide Sickness</lablel>
+  <labelNoun>Sickness from have a Dnaium transfusion</labelNoun>
+  <description>This pawn has been in the Creation Chamber, whether you had an operation or not...This pawn will
+  be in a coma for a few days. Being in the chamber means the pawn has inhaled dnaium particles (no matter how many) in a very close
+  proximity and Dnaium is still a bit potent to a pawn but not as much as injesting or a full Dnide gas out.</description>
+  <comps>
+    <li Class="HediffCompProperties_Disappears">
+      <disappearsAfterTicks>300000~400000</disappearsAfterTicks>
+    </li>
+  </comps>
+  <stages>
+    <li>
+      <capMods>
+        <li>
+          <capacity>Consciousness</capacity>
+          <setMax>0.1</setMax>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+</Defs>

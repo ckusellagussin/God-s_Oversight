@@ -33,6 +33,7 @@ Now that this element has been taken away from the main vein, the Dnaium is much
 <statFactors>
   <MaxHitPoints>0.7</MaxHitPoints>
   <Flammability>1</Flammability>
+  <DeteriorationRate>3.0</DeteriorationRate>
   <Beauty>2</Beauty>
 </statFactors>
 </stuffProps>
@@ -45,7 +46,7 @@ Now that this element has been taken away from the main vein, the Dnaium is much
   to make a Dnaide canister which can be used to mutate your pawns.</description>
   <graphicData>
     <graphicClass>Graphic_Single</graphicClass>
-    <texPath>Pure_Dnaium</texPath>
+    <texPath>Dnaium/Pure_Dnaium</texPath>
   </graphicData>
   <soundInteract>Silver_Drop</soundInteract>
   <soundDrop>Silver_Drop</soundDrop>
@@ -69,11 +70,30 @@ Now that this element has been taken away from the main vein, the Dnaium is much
   <statFactors>
     <MaxHitPoints>0.7</MaxHitPoints>
     <Flammability>1</Flammability>
+    <DeteriorationRate>4.0</DeteriorationRate>
     <Beauty>2</Beauty>
   </statFactors>
   </stuffProps>
 </ThingDef>
 
+<ThingDef ParentName="ResourceBase">
+  <defName>DnaideCanister</defName>
+  <label>Dnaide Canister</label>
+  <description>This canister has been refactored into a gas so it can be entered into the human body through the chamber. There is no going back once this has entered into the body, this is the safest way but there are is no guarantee of godhood</description>
+  <graphicData>
+    <graphicClass>Graphic_Single</graphicClass>
+    <texPath>Items/Dnaide_Canister</texPath>
+  </graphicData>
+  <statBases>
+    <MarketValue>5000</MarketValue>
+    <Mass>1.10</Mass>
+    <MaxHitPoints>30</MaxHitPoints>
+    <Flammability>10.0</Flammability>
+    <DeteriorationRate>20</DeteriorationRate>
+  </statBases>
+  <alwaysHaulable>true</alwaysHaulable>
+<stackLimit>1</stackLimit>
+</ThingDef>
 
 <ThingDef ParentName="RockBase">
   <defName>MineableDnaium</defName>

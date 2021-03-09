@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef ParentName="BedWithQualityBase">
+<ThingDef ParentName="BuildingBase">
   <defName>CreationChamber</defName>
   <label>Creation Chamber</label>
   <description>A solid chamber made out of Dnaium to keep the resource from leaking out. It's not
-    comfortable but then again neither will the procedure be.\n\n
+    comfortable but then again neither will the procedure be...
     This is where the base of performing a sinful act of altering the DNA happens, God looks
-    down on you as you alter his imperfect creation but then again why is he letting you do it?</description>
+    down on you as you alter his imperfect creation but then again why is he letting you do it?
+  </description>
+  <thingClass>Building_CryptosleepCasket</thingClass>
   <graphicData>
-    <texPath>Chamber</texPath>
+    <texPath>Chamber_Front</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     <shaderType>CutoutComplex</shaderType>
-    <drawSize>(2,2)</drawSize>
+    <drawSize>(3,2)</drawSize>
   </graphicData>
+  <researchPrerequisites><li>mutancyBuildings</li></researchPrerequisites>
   <castEdgeShadows>True</castEdgeShadows>
   <statBases>
     <MaxHitPoints>300</MaxHitPoints>
     <WorkToBuild>3500</WorkToBuild>
     <Mass>100</Mass>
-    <Flammability>0.0</Flammability>
+    <Flammability>5.0</Flammability>
     <BedRestEffectiveness>0.2</BedRestEffectiveness>
     <Comfort>0.2</Comfort>
+    <ImmunityGainSpeedFactor>0.7</ImmunityGainSpeedFactor>
+    <MedicalTendQualityOffset>0.10</MedicalTendQualityOffset>
   </statBases>
+  <hasInteractionCell>true</hasInteractionCell>
+  <size>(1,2)</size>
   <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
-  <constructionSkillPrerequisite>15</constructionSkillPrerequisite>
+  <building>
+    <isPlayerEjectable>true</isPlayerEjectable>
+    <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    <buildingSizeCategory>Small</buildingSizeCategory>
+  </building>
+  <costList>
+    <Steel>20</Steel>
+    <Dnaium>60</Dnaium>
+    <ComponentIndustrial>5</ComponentIndustrial>
+  </costList>
+  <inspectorTabs>
+    <li>ITab_ContentsCasket</li>
+  </inspectorTabs>
+  <constructionSkillPrerequisite>13</constructionSkillPrerequisite>
+  <techLevel>Ultra</techLevel>
 </ThingDef>
 
 

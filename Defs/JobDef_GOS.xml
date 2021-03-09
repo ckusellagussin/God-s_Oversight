@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>enterCreationChamber</defName>
+    <driverClass>JobDriver_EnterCreationChamber</driverClass>
+    <reportString>entering creation chamber.</reportString>
+    <taleOnCompletion>EnteredCreationChamber</taleOnCompletion>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+
+
+</Defs>
