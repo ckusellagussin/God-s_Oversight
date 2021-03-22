@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 <ThingDef ParentName="BuildingBase">
-  <defName>CreationChamber</defName>
+  <defName>creationChamber</defName>
   <label>Creation Chamber</label>
   <description>A solid chamber made out of Dnaium to keep the resource from leaking out. It's not
-    comfortable but then again neither will the procedure be...
-    This is where the base of performing a sinful act of altering the DNA happens, God looks
-    down on you as you alter his imperfect creation but then again why is he letting you do it?
-  </description>
-  <thingClass>Building_CryptosleepCasket</thingClass>
+    comfortable but then again neither will the procedure be...This is where the base of performing a sinful act of altering the DNA happens, God looks
+    down on you as you alter his imperfect creation but then again why is he letting you do it?</description>
+  <thingClass>God_s_Oversight.Buildings.CreationChamber.Building_CreationChamber</thingClass>
   <graphicData>
-    <texPath>Chamber_Front</texPath>
+    <texPath>Buildings/Chamber_Front</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     <shaderType>CutoutComplex</shaderType>
     <drawSize>(3,2)</drawSize>
@@ -47,9 +44,4 @@
   <constructionSkillPrerequisite>13</constructionSkillPrerequisite>
   <techLevel>Ultra</techLevel>
 </ThingDef>
-
-
-
-
-
 </Defs>

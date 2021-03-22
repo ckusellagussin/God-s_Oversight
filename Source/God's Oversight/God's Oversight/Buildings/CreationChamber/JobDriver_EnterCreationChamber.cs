@@ -10,7 +10,7 @@ using God_s_Oversight.Buildings.CreationChamber;
 
 namespace God_s_Oversight.Buildings
 {
-    class JobDriver_EnterCreationChamber : JobDriver
+    class JobDriver_enterCreationChamber : JobDriver
     {
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -26,6 +26,8 @@ namespace God_s_Oversight.Buildings
             toil.WithProgressBarToilDelay(TargetIndex.A);
             yield return toil;
             Toil enter = new Toil();
+
+            //Start action of pawn entering the chamber
             enter.initAction = delegate
             {
                 Pawn actor = enter.actor;

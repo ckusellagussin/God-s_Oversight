@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildings\CreationChamber\Building_CreationChamber.cs" />
-    <Compile Include="Buildings\CreationChamber\JobDriver_EnterCreationChamber.cs" />
+    <Compile Include="Buildings\CreationChamber\JobDriver_enterCreationChamber.cs" />
     <Compile Include="Defs\DefOf.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

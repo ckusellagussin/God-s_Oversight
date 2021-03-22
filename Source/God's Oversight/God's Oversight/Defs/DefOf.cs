@@ -8,6 +8,7 @@ using RimWorld;
 
 namespace God_s_Oversight.Defs
 {
+    [DefOf]
     public static class MyDefOf
     {
         public static ThingDef creationChamber;

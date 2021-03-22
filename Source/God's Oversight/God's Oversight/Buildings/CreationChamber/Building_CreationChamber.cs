@@ -128,8 +128,25 @@ namespace God_s_Oversight.Buildings.CreationChamber
             
         }
 
-        
+      /*  public static Building_CreationChamber FindCreationChamberFor (Pawn p, Pawn traveler, bool ignoreOtherReservations = false)
+        {
 
+
+            foreach (DefOf item in DefDatabase<DefOf>.AllDefs.Where((DefOf def) => typeof(Building_CreationChamber).IsAssignableFrom(def.thingClass)))
+            {
+
+
+
+
+            }
+
+
+
+            return null;
+        }
+
+        
+      */
 
     }
 

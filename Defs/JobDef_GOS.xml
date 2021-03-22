@@ -2,9 +2,8 @@
 <Defs>
   <JobDef>
     <defName>enterCreationChamber</defName>
-    <driverClass>JobDriver_EnterCreationChamber</driverClass>
+    <driverClass>God_s_Oversight.Buildings.JobDriver_enterCreationChamber</driverClass>
     <reportString>entering creation chamber.</reportString>
-    <taleOnCompletion>EnteredCreationChamber</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
