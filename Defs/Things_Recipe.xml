@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>Make_Pure_Dnaium</defName>
+    <label>Make Pure Dnaium from Dnaium</label>
+    <description>Make pure dnaium from dnaium by finely refining the meteorite</description>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>3500</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Dnaium</li>
+          </thingDefs>
+        </filter>
+          <count>150</count>
+      </li>
+    </ingredients>
+  <fixedIngredientFilter>
+    <thingDefs>
+      <li>Dnaium</li>
+    </thingDefs>
+  </fixedIngredientFilter>
+  <researchPrerequisite>mutancyRefine</researchPrerequisite>
+  <products>
+    <PureDnaium>100</PureDnaium>
+  </products>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>Make_Dnaide_Canister</defName>
+    <label>Make a Dnaide Canister from Pure Dnaium</label>
+    <description>Make a Dnaide Canister from Pure Dnaium by extracting Dnaium molecules from Pure Dnaium</description>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <workAmount>3500</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PureDnaium</li>
+          </thingDefs>
+        </filter>
+          <count>200</count>
+      </li>
+    </ingredients>
+  <fixedIngredientFilter>
+    <thingDefs>
+      <li>Dnaium</li>
+    </thingDefs>
+  </fixedIngredientFilter>
+  <researchPrerequisite>mutancyRefine</researchPrerequisite>
+  <products>
+    <DnaideCanister>1</DnaideCanister>
+  </products>
+  </RecipeDef>
+
+</Defs>
