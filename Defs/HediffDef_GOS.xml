@@ -5,7 +5,7 @@
 <HediffDef ParentName="DiseaseBase">
   <defName>dnaideSickness</defName>
   <label>Dnaide Sickness</label>
-  <labelNoun>Sickness from have a Dnaium transfusion</labelNoun>
+  <labelNoun>Sickness from having a Dnaium transfusion</labelNoun>
   <description>This pawn has been in the Creation Chamber, whether you had an operation or not...This pawn will
   be in a coma for a few days. Being in the chamber means the pawn has inhaled dnaium particles (no matter how many) in a very close
   proximity and Dnaium is still a bit potent to a pawn but not as much as injesting or a full Dnide gas out.
@@ -27,4 +27,28 @@
   </stages>
 </HediffDef>
 
+<HediffDef>
+  <defName>SuperSpeed</defName>
+    <label>Super Speed</label>
+    <labelNoun>You have obtained the power of Super speed, just like the ancient Earth God Hermes</labelNoun>
+    <description>Super Speed is the power to run at an extreme pace and do tasks at an extremely fast workspeed.
+      The downfall of this and all powers is that you are more likely to collapse from exaustion just like all powers</description>
+      <makesSickThought>false</makesSickThought>
+      <tendable>false</tendable>
+      <makesAlert>false</makesAlert>
+    <stages>
+      <li>
+      <capMods>
+          <li>
+        <capacity>Moving</capacity>
+        <offset>0.8</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.8</offset>
+          </li>
+        </capMods>
+      </li>
+      </stages>
+        </HediffDef>
 </Defs>
