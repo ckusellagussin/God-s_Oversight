@@ -28,7 +28,7 @@
 </HediffDef>
 
 <HediffDef>
-  <defName>SuperSpeed</defName>
+  <defName>superSpeed</defName>
     <label>Super Speed</label>
     <labelNoun>You have obtained the power of Super speed, just like the ancient Earth God Hermes</labelNoun>
     <description>Super Speed is the power to run at an extreme pace and do tasks at an extremely fast workspeed.
@@ -38,6 +38,7 @@
       <makesAlert>false</makesAlert>
     <stages>
       <li>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
       <capMods>
           <li>
         <capacity>Moving</capacity>

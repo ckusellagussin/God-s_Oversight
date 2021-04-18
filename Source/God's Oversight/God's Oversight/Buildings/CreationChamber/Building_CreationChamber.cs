@@ -25,6 +25,7 @@ namespace God_s_Oversight.Buildings.CreationChamber
                 if (allowSpecialEffects)
                 {
                     MyDefOf.CreationChamber_Accept.PlayOneShot(new TargetInfo(base.Position, base.Map));
+                    Log.Message("You have entered the cage");
 
                 }
                 return true;
@@ -89,6 +90,7 @@ namespace God_s_Oversight.Buildings.CreationChamber
                     command_Action.Disable("CommandPodEjectFailEmpty".Translate());
 
 
+
                 }
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/PodEject");
                 yield return command_Action;
@@ -109,7 +111,7 @@ namespace God_s_Oversight.Buildings.CreationChamber
                     if (pawn.RaceProps.IsFlesh)
                     {
                         pawn.health.AddHediff(MyDefOf.dnaideSickness);
-
+                        
                     }
 
                 }
@@ -126,6 +128,27 @@ namespace God_s_Oversight.Buildings.CreationChamber
 
 
             
+        }
+
+        public void creationSystem()
+        {
+            foreach (Thing item in (IEnumerable<Thing>)innerContainer)
+            {
+                Pawn pawn = item as Pawn;
+                if(pawn != null)
+                {
+                    
+
+                    
+
+                }
+
+
+            }
+
+
+
+
         }
 
      
