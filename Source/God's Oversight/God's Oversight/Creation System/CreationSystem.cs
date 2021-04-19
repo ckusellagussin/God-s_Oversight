@@ -14,8 +14,7 @@ namespace God_s_Oversight.Creation_System
 {
     class CreationSystem 
     {
-
-        protected Pawn pawn;
+                     
 
         public List<Trait> allTraits = new List<Trait>();
 
@@ -69,11 +68,12 @@ namespace God_s_Oversight.Creation_System
 
         };
 
+        public void traitSystem()
+        {
 
-        
 
 
-
+        }
 
 
     }

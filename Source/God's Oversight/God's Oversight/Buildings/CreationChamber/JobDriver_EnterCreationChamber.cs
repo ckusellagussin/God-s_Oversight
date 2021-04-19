@@ -8,6 +8,7 @@ using Verse.AI;
 using RimWorld;
 using God_s_Oversight.Buildings.CreationChamber;
 using System.Diagnostics;
+using God_s_Oversight.Creation_System;
 
 namespace God_s_Oversight.Buildings
 {
@@ -43,54 +44,11 @@ namespace God_s_Oversight.Buildings
                 Action action = delegate
                 {
                     actor.DeSpawn();                   
-                    chamber.TryAcceptThing(actor);
-                    
-                    var traits = pawn.story.traits.allTraits;
+                    chamber.TryAcceptThing(actor);                   
 
+                    traitSystem();
                     
-                    int pMinded = 0;
-                    int mMinded = 0;
-
-                    string converted = string.Join(", ", traits);
                   
-                    Log.Message(converted);
-
-                    foreach(string traitsPawn in isPhys)
-                    {
-
-                        if(converted.Contains(traitsPawn))
-                        {
-
-                            pMinded += 1; 
-
-                        }
-
-                    }
-
-                    foreach(string traitsPawn in isMental)
-                    {
-
-                        if(converted.Contains(traitsPawn))
-                        {
-
-                            mMinded += 1;
-
-                        }
-
-                    }
-
-                    if(pMinded >= mMinded)
-                    {
-
-                        Log.Message("This pawn is more Physical Minded traits with" + pMinded + " physical traits");
-
-                    }
-                    else if (mMinded> pMinded)
-                    {
-
-                        Log.Message("This pawn is more Mental Minded traits with" + mMinded + " physical traits");
-
-                    }
 
    
 
@@ -122,8 +80,74 @@ namespace God_s_Oversight.Buildings
 
         }
 
+
+
+
+        public void traitSystem()
+        {
+
+            var traits = pawn.story.traits.allTraits;
+
+
+            int pMinded = 0;
+            int mMinded = 0;
+
+            string converted = string.Join(", ", traits);
+
+            Log.Message(converted);
+
+            foreach (string traitsPawn in isPhys)
+            {
+
+                if (converted.Contains(traitsPawn))
+                {
+
+                    pMinded += 1;
+
+                }
+
+            }
+
+            foreach (string traitsPawn in isMental)
+            {
+
+                if (converted.Contains(traitsPawn))
+                {
+
+                    mMinded += 1;
+
+                }
+
+            }
+
+            if (pMinded >= mMinded)
+            {
+
+                Log.Message("This pawn is more Physical Minded traits with" + pMinded + " physical traits");
+
+            }
+            else if (mMinded > pMinded)
+            {
+
+                Log.Message("This pawn is more Mental Minded traits with" + mMinded + " physical traits");
+
+            }
+
+
+
+        }
+
+
+
+
+
+
     }
 
 
-}
+
+    }
+
+
+
 
