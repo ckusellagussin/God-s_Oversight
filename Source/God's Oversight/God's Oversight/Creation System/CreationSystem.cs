@@ -15,65 +15,9 @@ namespace God_s_Oversight.Creation_System
     class CreationSystem 
     {
                      
+        public float baseSuccess = 0.3f;
 
-        public List<Trait> allTraits = new List<Trait>();
-
-        public float bassSuccess = 0.3f;
-
-        public HediffDef[] Tier1 =
-        {
-
-
-
-
-        };
-
-        public HediffDef[] Tier2 =
-        {
-
-
-
-
-        };
-
-        public HediffDef[] Tier3 =
-        {
-
-
-
-
-        };
-
-        public HediffDef[] Tier4 =
-        {
-
-
-
-
-        };
-
-        public HediffDef[] Tier5 =
-        {
-
-
-
-
-        };
-
-        public HediffDef[] Tier6 =
-        {
-
-
-
-
-        };
-
-        public void traitSystem()
-        {
-
-
-
-        }
+     
 
 
     }

@@ -16,8 +16,7 @@ namespace God_s_Oversight.Buildings
   
     class JobDriver_enterCreationChamber : JobDriver
     {
-        string[] isPhys = { "Bloodlust", "Brawler", "Tough-0", "Nimble-0", "SpeedOffset-2", "SpeedOffset-1", "Masochist-0", "QuickSleeper-0", "ShootingAccuracy-1", "ShootingAccuracy--1", "Immunity-1"};
-        string[] isMental = { "TooSmart-0", "FastLearner-0", "Nerves-2", "Nerves--1", "NaturalMood-2", "NaturalMood--2", "Psychopath-0", "SlowLearner-0", "GreatMemory", "Industriousness-1", "Industriousness-2", "Nerves-1"};
+
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -44,13 +43,16 @@ namespace God_s_Oversight.Buildings
                 Action action = delegate
                 {
                     actor.DeSpawn();                   
-                    chamber.TryAcceptThing(actor);                   
+                    chamber.TryAcceptThing(actor);
 
-                    traitSystem();
-                    
-                  
+                    Log.Message(chamber + " " + chamber.GetType());
+                    if (chamber is Building_CreationChamber creation)
+                    {
+                        creation.traitSystem(actor);
+                        creation.successChance(actor);
+                    }
 
-   
+
 
                 };
                
@@ -81,72 +83,10 @@ namespace God_s_Oversight.Buildings
         }
 
 
-
-
-        public void traitSystem()
-        {
-
-            var traits = pawn.story.traits.allTraits;
-
-
-            int pMinded = 0;
-            int mMinded = 0;
-
-            string converted = string.Join(", ", traits);
-
-            Log.Message(converted);
-
-            foreach (string traitsPawn in isPhys)
-            {
-
-                if (converted.Contains(traitsPawn))
-                {
-
-                    pMinded += 1;
-
-                }
-
-            }
-
-            foreach (string traitsPawn in isMental)
-            {
-
-                if (converted.Contains(traitsPawn))
-                {
-
-                    mMinded += 1;
-
-                }
-
-            }
-
-            if (pMinded >= mMinded)
-            {
-
-                Log.Message("This pawn is more Physical Minded traits with" + pMinded + " physical traits");
-
-            }
-            else if (mMinded > pMinded)
-            {
-
-                Log.Message("This pawn is more Mental Minded traits with" + mMinded + " physical traits");
-
-            }
-
-
-
-        }
-
-
-
-
-
-
     }
 
 
-
-    }
+}
 
 
 
