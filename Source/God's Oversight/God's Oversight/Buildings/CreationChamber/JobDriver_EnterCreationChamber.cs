@@ -44,11 +44,13 @@ namespace God_s_Oversight.Buildings
                 {
                     actor.DeSpawn();                   
                     chamber.TryAcceptThing(actor);
+                    
 
                     Log.Message(chamber + " " + chamber.GetType());
+                    
                     if (chamber is Building_CreationChamber creation)
                     {
-                        creation.traitSystem(actor);
+                        
                         creation.successChance(actor);
                     }
 
