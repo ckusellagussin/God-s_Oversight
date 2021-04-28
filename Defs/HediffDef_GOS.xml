@@ -52,4 +52,175 @@
       </li>
       </stages>
         </HediffDef>
+
+//////////////////////////////Temp//////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<HediffDef ParentName="ChronicDiseaseBase">
+  <defName>BadBack</defName>
+  <label>bad back</label>
+  <labelNoun>a bad back</labelNoun>
+  <description>Degradation in the spinal column and surrounding musculature. This makes it hard to move and bend smoothly.</description>
+  <stages>
+    <li>
+      <capMods>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.30</offset>
+        </li>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.10</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+<HediffDef ParentName="ChronicDiseaseBase">
+  <defName>Frail</defName>
+  <label>frail</label>
+  <labelNoun>frailty</labelNoun>
+  <description>Generalized loss of muscle and bone density.</description>
+  <stages>
+    <li>
+      <capMods>
+        <li>
+          <capacity>Moving</capacity>
+          <offset>-0.30</offset>
+        </li>
+        <li>
+          <capacity>Manipulation</capacity>
+          <offset>-0.30</offset>
+        </li>
+      </capMods>
+    </li>
+  </stages>
+</HediffDef>
+
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Blindness</defName>
+    <label>blindness</label>
+    <description>Total inability to see.</description>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-1</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>HearingLoss</defName>
+    <label>hearing loss</label>
+    <description>Inability to hear quiet sounds due to degradation of hair cells in the cochlea.</description>
+    <cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.5</partEfficiencyOffset>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Dementia</defName>
+    <label>dementia</label>
+    <description>Neural degradation which causes deficits in the ability to think and remember. Dementia has various causes including aging, specific illnesses, and toxins.</description>
+    <comps>
+      <li Class="HediffCompProperties_SkillDecay">
+        <decayPerDayPercentageLevelCurve>
+          <points>
+            <li>(4, 0.05)</li>
+            <li>(12, 0.15)</li>
+            <li>(20, 0.25)</li>
+          </points>
+        </decayPerDayPercentageLevelCurve>
+    </li>
+    </comps>
+    <stages>
+      <li>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>5</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>Alzheimers</defName>
+    <label>alzheimer's</label>
+    <description>A brain disease usually associated with aging. Alzheimer's disease causes progressive degradation in the ability to think and remember. Patients are known to forget close relatives and sometimes wander around in confusion.</description>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.003</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>minor</label>
+        <partEfficiencyOffset>-0.05</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>12</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>7</forgetMemoryThoughtMtbDays>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.2</minSeverity>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>9</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>4</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.15</pctConditionalThoughtsNullified>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.5</minSeverity>
+        <partEfficiencyOffset>-0.15</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>2</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.33</pctConditionalThoughtsNullified>
+      </li>
+      <li>
+        <label>major</label>
+        <minSeverity>0.8</minSeverity>
+        <partEfficiencyOffset>-0.2</partEfficiencyOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <forgetMemoryThoughtMtbDays>1.0</forgetMemoryThoughtMtbDays>
+        <pctConditionalThoughtsNullified>0.5</pctConditionalThoughtsNullified>
+      </li>
+    </stages>
+  </HediffDef>
+
 </Defs>

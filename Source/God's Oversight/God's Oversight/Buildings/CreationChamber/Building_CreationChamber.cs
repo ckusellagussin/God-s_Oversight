@@ -22,8 +22,6 @@ namespace God_s_Oversight.Buildings.CreationChamber
         string[] isPhys = { "Bloodlust-0", "Brawler-0", "Tough-0", "Nimble-0", "SpeedOffset-2", "SpeedOffset-1", "Masochist-0", "QuickSleeper-0", "ShootingAccuracy-1", "ShootingAccuracy--1", "Immunity-1" };
         string[] isMent = { "TooSmart-0", "FastLearner-0", "Nerves-2", "Nerves--1", "NaturalMood-2", "NaturalMood--2", "Psychopath-0", "SlowLearner-0", "GreatMemory", "Industriousness-1", "Industriousness-2", "Nerves-1" };
 
-
-
         string[] plus20 = { "Masochist-0", "SpeedOffset-2", "DrugDesire-1", "Industriousness-1" };
         string[] plus30 = { "DrugDesire-2", "Industriousness-2", "NaturalMood-1", "Nerves-1" };
         string[] plus40 = { "NaturalMood-2", "Nerves-2", "Immunity-1" };
@@ -34,90 +32,6 @@ namespace God_s_Oversight.Buildings.CreationChamber
         string[] minus40 = { "NaturalMood--2" };
         string[] minus50 = { "Wimp-0", "Nerves--2", "Neurotic-2" };
         string[] minus100 = { "Immunity-1" };
-
-        public int baseChance = 30;
-
-        public HediffDef[] Tier1p =
-        {
-
-       
-        };
-
-        
-
-        public HediffDef[] Tier1m =
-        {
-
-        };
- 
-
-        public HediffDef[] Tier2p =
-        {
-
-        
-        };
-       
-        public HediffDef[] Tier2m =
-        {
-
-        
-        };
-
-        public HediffDef[] Tier3p =
-        {
-
-
-       
-        };
-
-        public HediffDef[] Tier3m =
-       {
-
-
-       
-        };
-
-        public HediffDef[] Tier4p =
-        {
-           
-
-        
-        };
-
-        public HediffDef[] Tier4m =
-        {
-
-
-        
-        };
-
-        public HediffDef[] Tier5p =
-        {
-
-        
-        };
-
-        public HediffDef[] Tier5m =
-        {
-
-        
-        };
-
-        public HediffDef[] Tier6p =
-        {
-
-
-        
-        };
-
-        public HediffDef[] Tier6m =
-        {
-
-
-
-        
-        };
-
 
         public override bool TryAcceptThing(Thing thing, bool allowSpecialEffects = true)
         {
@@ -175,7 +89,9 @@ namespace God_s_Oversight.Buildings.CreationChamber
         public override IEnumerable<Gizmo> GetGizmos()
         {
 
-        foreach(Gizmo gizmo in base.GetGizmos())
+            Pawn actor = ContainedThing as Pawn;
+
+            foreach (Gizmo gizmo in base.GetGizmos())
             {
                 yield return gizmo;
 
@@ -196,7 +112,25 @@ namespace God_s_Oversight.Buildings.CreationChamber
                 command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/PodEject");
                 yield return command_Action;
             }
+            
+            if (base.Faction == Faction.OfPlayer && innerContainer.Count > 0 && def.building.isPlayerEjectable)
+            {
 
+                Command_Action command_Action = new Command_Action();
+                command_Action.action = () => creationSystem(actor);
+                command_Action.defaultLabel = "StartEvolution".Translate();
+
+                if (innerContainer.Count == 0)
+                {
+                    command_Action.Disable("Can'tEjectFromChamber".Translate());
+
+
+
+                }
+                command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/PodEject");
+                yield return command_Action;
+
+            }
 
         }
 
@@ -232,15 +166,15 @@ namespace God_s_Oversight.Buildings.CreationChamber
         }
 
 
-        public void successChance(Pawn actor)
+        private int successChance(Pawn actor)
         {
 
+        int baseChance = 30;
+       
+        var traits = actor.story.traits.allTraits;
          
-         var traits = actor.story.traits.allTraits;
-         string converted = string.Join(", ", traits);
-
-            Log.Message(converted);
-
+        string converted = string.Join(", ", traits);
+         
             foreach (string traitsPawn in plus20)
             {
 
@@ -358,9 +292,9 @@ namespace God_s_Oversight.Buildings.CreationChamber
 
 
             }
-
+           
             Log.Message("The chance of success for this pawn is " + baseChance + "%");
-          
+            return baseChance;
         }
 
 
@@ -376,9 +310,10 @@ namespace God_s_Oversight.Buildings.CreationChamber
 
                 if (converted.Contains(traitsPawn))
                 {
-                    
-                    Log.Message("This pawn has " + pMinded + " traits");
+
                     pMinded += 1;
+                    Log.Message("This pawn has " + pMinded + " Physical traits");
+                    
                     
                 }
 
@@ -402,8 +337,10 @@ namespace God_s_Oversight.Buildings.CreationChamber
 
                 if (converted.Contains(traitsPawn))
                 {
-                    Log.Message("This pawn has has "+ traits+" mental traits");
+                    
                     mMinded += 1;
+                    Log.Message("This pawn has"+ mMinded+" Mental traits");
+                    
                     
                 }
                
@@ -417,62 +354,242 @@ namespace God_s_Oversight.Buildings.CreationChamber
         {
             int physical = PhysicalTraits(actor);
             int mental = MentalTraits(actor);
+            int sum = 0;
+            
 
             if (physical >= mental)
             {
-                Log.Message("This pawn has more physical traits with "+physical+"than mental");
+                sum = physical - mental;
+                Log.Message("This pawn has more physical traits with " +sum+ " trait/s more than mental");
                 return true;
                 
             }
-            
+            sum = mental - physical;
+            Log.Message("This pawn has more mental traits with " +sum+ " trait/s more than physical");
             return false;
                     
         }
 
-
-
+ 
 
         public void creationSystem(Pawn actor)
         {
-            //Need value of pMinded or mMinded depending on what is more
-            //Need to know what is more as well so a bool saying isPhys or isMental true
-            //Need to get success chance from pawn too
+
+           
+            int physical = PhysicalTraits(actor);
+            int mental = MentalTraits(actor);
+            int totalSuccess = successChance(actor);          
+             
+            bool isPhysical = Mindedness(actor);
 
 
-            foreach (Thing item in (IEnumerable<Thing>)innerContainer)
-            {
+           foreach (Thing item in (IEnumerable<Thing>)innerContainer)
+           {
 
-                actor = item as Pawn;
-                var traits = actor.story.traits.allTraits;
-                string converted = string.Join(", ", traits);
-
-                
-
-                if (actor != null)
-                {
+               if (actor != null)
+               {
                     PawnComponentsUtility.AddComponentsForSpawn(actor);
                     if (actor.RaceProps.IsFlesh)
                     {
 
-                     //   if(PhysicalTraits >= MentalTraits)
+                        if (isPhysical == true)
+                        {
 
-                        
+                            if (totalSuccess <= 24)
+                            {
+                                HediffDef tier1 = Tier1P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier1);
+                                Log.Message("This Pawn has been given " + tier1 + " from the Death Tier");
+
+                            }
+
+                            if (totalSuccess >= 25 && totalSuccess <= 49)
+                            {
+                                HediffDef tier2 = Tier2P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier2);
+                                Log.Message("This Pawn has been given " + tier2 + " from Physical Tier 2");
+
+                            }
+                            if (totalSuccess >= 50 && totalSuccess <= 59)
+                            {
+                                HediffDef tier3 = Tier3P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier3);
+                                Log.Message("This Pawn has been given " + tier3 + " from Physical Tier 3");
+
+                            }
+                            if (totalSuccess >= 60 && totalSuccess <= 79)
+                            {
+                                HediffDef tier4 = Tier4P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier4);
+                                Log.Message("This Pawn has been given " + tier4 + " from Physical Tier 4");
+
+                            }
+                            if (totalSuccess >= 80 && totalSuccess <= 89)
+                            {
+                                HediffDef tier5 = Tier5P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier5);
+                                Log.Message("This Pawn has been given " + tier5 + " from Physical Tier 5");
+
+                            }
+
+                            if (totalSuccess >= 90)
+                            {
+                                HediffDef tier6 = Tier6P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier6);
+                                Log.Message("This Pawn has been given " + tier6 + " from Physical God Tier");
+
+                            }
+
+                        }
+
+                        else if (isPhysical == false)
+                        {
+                            if (totalSuccess <= 24)
+                            {
+                                HediffDef tier1M = Tier1M.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier1M);
+                                Log.Message("This Pawn has been given " + tier1M + " from Death Tier");
+
+                            }
+
+                            if (totalSuccess >= 25 && totalSuccess <= 49)
+                            {
+                                HediffDef tier2M = Tier2M.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier2M);
+                                Log.Message("This Pawn has been given " + tier2M + " from Mental Tier 2");
+
+                            }
+                            if (totalSuccess >= 50 && totalSuccess <= 59)
+                            {
+                                HediffDef tier3M = Tier3P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier3M);
+                                Log.Message("This Pawn has been given " + tier3M + " from Mental Tier 3");
+
+                            }
+                            if (totalSuccess >= 60 && totalSuccess <= 79)
+                            {
+                                HediffDef tier4M = Tier4P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier4M);
+                                Log.Message("This Pawn has been given " + tier4M + " from Mental Tier 4");
+
+                            }
+                            if (totalSuccess >= 80 && totalSuccess <= 89)
+                            {
+                                HediffDef tier5M = Tier5P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier5M);
+                                Log.Message("This Pawn has been given " + tier5M + " from Mental Tier 5");
+
+                            }
+
+                            if (totalSuccess >= 90)
+                            {
+                                HediffDef tier6M = Tier6P.RandomElementByWeight(x => x.Second).First;
+                                actor.health.AddHediff(tier6M);
+                                Log.Message("This Pawn has been given " + tier6M + " from Mental God Tier");
+
+                            }
 
 
+                        }
 
                     }
 
+               }
 
 
-                }
+           }
 
 
-            }
-
-
-
+            
 
         }
+
+
+        public static List<Pair<HediffDef, int>> Tier1P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier2P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 20), new Pair<HediffDef, int>(MyDefOf.BadBack, 20), new Pair<HediffDef, int>(MyDefOf.Frail, 20), new Pair<HediffDef, int>(MyDefOf.Blindness, 20), new Pair<HediffDef, int>(MyDefOf.HearingLoss,20)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier3P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 50), new Pair<HediffDef, int>(MyDefOf.BadBack, 20), new Pair<HediffDef, int>(MyDefOf.Frail, 10), new Pair<HediffDef, int>(MyDefOf.Blindness, 10), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 10)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier4P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 70), new Pair<HediffDef, int>(MyDefOf.BadBack, 5), new Pair<HediffDef, int>(MyDefOf.Frail, 10), new Pair<HediffDef, int>(MyDefOf.Blindness, 5), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 10)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier5P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 75), new Pair<HediffDef, int>(MyDefOf.BadBack, 10), new Pair<HediffDef, int>(MyDefOf.Frail, 5), new Pair<HediffDef, int>(MyDefOf.Blindness, 5), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 5)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier6P = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 100),
+
+        };
+
+
+        public static List<Pair<HediffDef, int>> Tier1M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier2M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier3M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier4M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier5M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
+        public static List<Pair<HediffDef, int>> Tier6M = new List<Pair<HediffDef, int>>
+        {
+
+            new Pair<HediffDef, int>(MyDefOf.superSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+
+        };
+
 
 
 

@@ -8,7 +8,6 @@ using Verse.AI;
 using RimWorld;
 using God_s_Oversight.Buildings.CreationChamber;
 using System.Diagnostics;
-using God_s_Oversight.Creation_System;
 
 namespace God_s_Oversight.Buildings
 {
@@ -43,15 +42,12 @@ namespace God_s_Oversight.Buildings
                 Action action = delegate
                 {
                     actor.DeSpawn();                   
-                    chamber.TryAcceptThing(actor);
-                    
-
-                    Log.Message(chamber + " " + chamber.GetType());
-                    
+                    chamber.TryAcceptThing(actor);                
                     if (chamber is Building_CreationChamber creation)
                     {
-                        
-                        creation.successChance(actor);
+                      //  creation.creationSystem(actor);
+
+                       
                     }
 
 

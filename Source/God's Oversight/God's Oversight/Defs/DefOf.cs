@@ -11,13 +11,18 @@ namespace God_s_Oversight.Defs
     [DefOf]
     public static class MyDefOf
     {
-        
+
         //ThingDef
         public static ThingDef creationChamber;
 
         //Abilities and other HeDif
         public static HediffDef dnaideSickness;
         public static HediffDef superSpeed;
+        public static HediffDef BadBack;
+        public static HediffDef Frail;
+        public static HediffDef Blindness;
+        public static HediffDef HearingLoss;
+        public static HediffDef Dementia;
 
         //JobDef
         public static JobDef enterCreationChamber;
