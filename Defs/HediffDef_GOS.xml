@@ -28,30 +28,140 @@
 </HediffDef>
 
 <HediffDef>
-  <defName>superSpeed</defName>
-    <label>Super Speed</label>
-    <labelNoun>You have obtained the power of Super speed, just like the ancient Earth God Hermes</labelNoun>
-    <description>Super Speed is the power to run at an extreme pace and do tasks at an extremely fast workspeed.
+  <defName>extremeSpeed</defName>
+    <label>Extreme Speed</label>
+    <labelNoun>You have obtained the power of Extreme speed, just like the ancient Earth God Hermes</labelNoun>
+    <description>Extrme Speed is the power to run at an extreme pace and do tasks at an extremely fast workspeed.
       The downfall of this and all powers is that you are more likely to collapse from exaustion just like all powers</description>
       <makesSickThought>false</makesSickThought>
       <tendable>false</tendable>
-      <makesAlert>false</makesAlert>
+      <makesAlert>true</makesAlert>
     <stages>
       <li>
         <restFallFactorOffset>0.3</restFallFactorOffset>
       <capMods>
           <li>
         <capacity>Moving</capacity>
-        <offset>0.8</offset>
+        <offset>1.0</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>0.8</offset>
+            <offset>0.3</offset>
           </li>
         </capMods>
       </li>
       </stages>
-        </HediffDef>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>extremePrecision</defName>
+      <label>Extreme Precision</label>
+      <labelNoun>You have obtained the power of Extreme Accuracy, just like the ancient Greek Earth Goddess Astrea</labelNoun>
+      <description>Extreme Accuracy is the power to shoot with extreme precision at the pawn's desired target. This applies to the gun, the bow and throwing items.</description>
+        <makesSickThought>false</makesSickThought>
+        <tendable>false</tendable>
+        <makesAlert>true</makesAlert>
+        <stages>
+          <li>
+            <restFallFactorOffset>0.3</restFallFactorOffset>
+          <capMods>
+              <li>
+            <capacity>Sight</capacity>
+            <offset>1.0</offset>
+              </li>
+            </capMods>
+          </li>
+          </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>extremeIntelligence</defName>
+      <label>Extreme Intelligence</label>
+      <labelNoun>You have obtained the power of Extreme Intelligence, just like the ancient Greek Earth Goddess Athena</labelNoun>
+      <description>Extreme Intelligence is the power to learn skills incredibly quickly along with already having the incredible knowledge</description>
+        <makesSickThought>false</makesSickThought>
+        <tendable>false</tendable>
+        <makesAlert>true</makesAlert>
+        <stages>
+          <li>
+            <restFallFactorOffset>0.3</restFallFactorOffset>
+            <statOffsets>
+              <GlobalLearningFactor>1.0</GlobalLearningFactor>
+            </statOffsets>
+            </li>
+          </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>extremeUnderstanding</defName>
+      <label>Extreme Understanding</label>
+      <labelNoun>You have obtained the power of Extreme Understanding, just like the ancient Carribean Earth god Papa Legba</labelNoun>
+      <description>Extreme Hearing is the power to trade, negotiate and communicate with animals at a god like rate</description>
+        <makesSickThought>false</makesSickThought>
+        <tendable>false</tendable>
+        <makesAlert>true</makesAlert>
+        <stages>
+          <li>
+            <restFallFactorOffset>0.3</restFallFactorOffset>
+          <capMods>
+              <li>
+            <capacity>Hearing</capacity>
+            <offset>1.0</offset>
+              </li>
+            </capMods>
+          </li>
+          </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>extremeDexterity</defName>
+      <label>Extreme Dexterity</label>
+      <labelNoun>You have obtained the power of Extreme Dexterity, just like the ancient Earth God Kratos</labelNoun>
+      <description>Extrme Dexterity is the power of having extreme reflexes, hand-eye co-ordination and work speed.</description>
+        <makesSickThought>false</makesSickThought>
+        <tendable>false</tendable>
+        <makesAlert>true</makesAlert>
+      <stages>
+        <li>
+          <restFallFactorOffset>0.3</restFallFactorOffset>
+        <capMods>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>1.0</offset>
+            </li>
+          </capMods>
+        </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="ImplantHediffBase">
+      <defName>bulletproof</defName>
+      <label>Bulletproof</label>
+      <labelNoun>You have obtained the power of being bulletproof, just like the the god of...uhhh</labelNoun>
+      <description>Bulletproof is the ability of having bullets unable to penetrate the body, the pawn can still be damaged by impact and can get bruising.
+      This also means sharp melee weapons won't have an effect but the pawn is more vulnerable to blunt damage.</description>
+      <stages>
+        <li>
+          <statOffsets>
+            <ArmorRating_Blunt>-0.3</ArmorRating_Blunt>
+            <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+          </statOffsets>
+        </li>
+      </stages>
+      </HediffDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //////////////////////////////Temp//////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

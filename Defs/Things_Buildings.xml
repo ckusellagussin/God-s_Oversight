@@ -46,6 +46,18 @@
     </li>
     <li Class="CompProperties_Flickable"/>
     <li Class="CompProperties_Breakdownable"/>
+    <li Class="CompProperties_Refuelable">
+      <fuelLabel>Dnaium Canister installed</fuelLabel>
+      <fuelGizmoLabel>Dnaium</fuelGizmoLabel>
+      <outOfFuelMessage>No Dnaium Canister installed</outOfFuelMessage>
+      <fuelFilter><thingDefs><li>DnaideCanister</li></thingDefs></fuelFilter>
+      <fuelCapacity>1</fuelCapacity>
+      <fuelMultiplier>1</fuelMultiplier>
+      <initialFuelPercent>0</initialFuelPercent>
+      <minimumFueledThreshold>1</minimumFueledThreshold>
+      <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      <consumeFuelOnlyWhenUsed>True</consumeFuelOnlyWhenUsed>
+    </li>
   </comps>
   <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
   <inspectorTabs>

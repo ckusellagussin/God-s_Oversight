@@ -17,19 +17,24 @@ namespace God_s_Oversight.Defs
 
         //Abilities and other HeDif
         public static HediffDef dnaideSickness;
-        public static HediffDef superSpeed;
+        public static HediffDef extremeSpeed;
         public static HediffDef BadBack;
         public static HediffDef Frail;
         public static HediffDef Blindness;
         public static HediffDef HearingLoss;
         public static HediffDef Dementia;
+        public static HediffDef extremePrecision;
+        public static HediffDef extremeIntelligence;
+        public static HediffDef extremeUnderstanding;
+        public static HediffDef rockSkin;
+        public static HediffDef treeSkin;
 
         //JobDef
         public static JobDef enterCreationChamber;
 
         //SoundDef
         public static SoundDef CreationChamber_Accept;
-        public static SoundDef CreationChamber_Reject;
+        public static SoundDef CreationChamber_Eject;
 
 
         static MyDefOf()
