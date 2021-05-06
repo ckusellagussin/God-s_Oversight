@@ -178,6 +178,10 @@ namespace God_s_Oversight.Buildings.CreationChamber
             return usesPower && comp.PowerOn;
         }
 
+       
+        
+        
+        
         private int successChance(Pawn actor)
         {
 
