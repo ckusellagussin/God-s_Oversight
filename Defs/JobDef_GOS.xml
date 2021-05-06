@@ -7,6 +7,23 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
+  <WorkGiverDef>
+    <defName>DoBillsRefinery</defName>
+    <label>work at dnaium refinery</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>97</priorityInType>
+    <fixedBillGiverDefs>
+      <li>canisterRefiner</li>
+    </fixedBillGiverDefs>
+    <verb>refine chemicals</verb>
+    <gerund>refining chemicals at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
 
 
 </Defs>

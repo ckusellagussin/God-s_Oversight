@@ -11,7 +11,7 @@
     <texPath>Buildings/Chamber_Front</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     <shaderType>CutoutComplex</shaderType>
-    <drawSize>(3,2)</drawSize>
+    <drawSize>(2,2)</drawSize>
   </graphicData>
   <researchPrerequisites><li>mutancyBuildings</li></researchPrerequisites>
   <castEdgeShadows>True</castEdgeShadows>
@@ -115,6 +115,7 @@
     <li>ITab_Bills</li>
   </inspectorTabs>
     <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <designationCategory>Mutancy</designationCategory>
     <constructionSkillPrerequisite>14</constructionSkillPrerequisite>

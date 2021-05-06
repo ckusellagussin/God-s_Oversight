@@ -5,7 +5,7 @@
 <ResearchProjectDef>
   <defName>mutancyResearch</defName>
   <label>Mutancy</label>
-  <description>This is the beginning of the end, Your Colony will discover the origins of the mysterious elements Dnaium and it's gas counterpart-Dnaide-that is in your world along with the mysteries of the strange superbeings that have been appearing. </description>
+  <description>This is the beginning of the end, Your Colony will discover the origins of the mysterious elements Dnaium and it's gas counterpart-Dnaide-that is in your world along with the mysteries of the strange superbeings that have been appearing.</description>
   <baseCost>15000</baseCost>
   <techLevel>Ultra</techLevel>
   <researchViewX>5.0</researchViewX>
@@ -31,7 +31,7 @@
 <ResearchProjectDef>
   <defName>mutancyRefine</defName>
   <label>Dnaium Refinery</label>
-  <description>The refinery is needed for turning Dnaium into Dnaide so it can be compressed into a Dnaide Canister that is all ready to be injected into your test subject</description>
+  <description>The refinery is needed for turning Dnaium into Dnaide so it can be compressed into a Dnaide Canister that is all ready to be injected into your test subject.</description>
   <baseCost>8000</baseCost>
   <techLevel>Ultra</techLevel>
 <researchViewX>3.0</researchViewX>

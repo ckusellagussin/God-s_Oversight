@@ -8,8 +8,7 @@
   <labelNoun>Sickness from having a Dnaium transfusion</labelNoun>
   <description>This pawn has been in the Creation Chamber, whether you had an operation or not...This pawn will
   be in a coma for a few days. Being in the chamber means the pawn has inhaled dnaium particles (no matter how many) in a very close
-  proximity and Dnaium is still a bit potent to a pawn but not as much as injesting or a full Dnide gas out.
-</description>
+  proximity and Dnaium is still a bit potent to a pawn but not as much as injesting or a full Dnide gas out.</description>
   <comps>
     <li Class="HediffCompProperties_Disappears">
       <disappearsAfterTicks>300000~400000</disappearsAfterTicks>
