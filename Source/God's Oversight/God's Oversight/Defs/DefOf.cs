@@ -28,6 +28,8 @@ namespace God_s_Oversight.Defs
         public static HediffDef extremeUnderstanding;
         public static HediffDef rockSkin;
         public static HediffDef treeSkin;
+        public static HediffDef angryBrawler;
+        public static HediffDef unwaveringMorale;
 
         //JobDef
         public static JobDef enterCreationChamber;

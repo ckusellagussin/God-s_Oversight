@@ -521,9 +521,7 @@ namespace God_s_Oversight.Buildings.CreationChamber
 
 
            }
-
-
-            
+     
 
         }
 
@@ -538,35 +536,35 @@ namespace God_s_Oversight.Buildings.CreationChamber
         public static List<Pair<HediffDef, int>> Tier2P = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 5), new Pair<HediffDef, int>(MyDefOf.BadBack, 20), new Pair<HediffDef, int>(MyDefOf.Frail, 20), new Pair<HediffDef, int>(MyDefOf.Blindness, 20), new Pair<HediffDef, int>(MyDefOf.HearingLoss,20)
+            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 5), new Pair<HediffDef, int>(MyDefOf.BadBack, 30), new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 20), new Pair<HediffDef, int>(MyDefOf.HearingLoss,20)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier3P = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 15), new Pair<HediffDef, int>(MyDefOf.Frail, 15), new Pair<HediffDef, int>(MyDefOf.Blindness, 15), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 15), new Pair<HediffDef, int>(MyDefOf.treeSkin, 15), new Pair<HediffDef, int>(MyDefOf.rockSkin, 15)
+            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 15), new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 45)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier4P = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 30), new Pair<HediffDef, int>(MyDefOf.extremePrecision, 30), new Pair<HediffDef, int>(MyDefOf.Frail, 15), new Pair<HediffDef, int>(MyDefOf.Blindness, 10), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 15)
+            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 30), new Pair<HediffDef, int>(MyDefOf.extremePrecision, 30), new Pair<HediffDef, int>(MyDefOf.angryBrawler, 15), new Pair<HediffDef, int>(MyDefOf.Blindness, 10), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 15)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier5P = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 20), new Pair<HediffDef, int>(MyDefOf.rockSkin, 30), new Pair<HediffDef, int>(MyDefOf.extremePrecision, 20), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 5)
+            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 20), new Pair<HediffDef, int>(MyDefOf.angryBrawler, 30), new Pair<HediffDef, int>(MyDefOf.extremePrecision, 20), new Pair<HediffDef, int>(MyDefOf.HearingLoss, 5)
 
         };
 
-        public static List<Pair<HediffDef, int>> Tier6P = new List<Pair<HediffDef, int>>
+        public static List<Pair<HediffDef, float>> Tier6P = new List<Pair<HediffDef, float>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 25), new Pair<HediffDef, int>(MyDefOf.rockSkin, 25), new Pair<HediffDef, int>(MyDefOf.extremePrecision, 25), new Pair<HediffDef, int>(MyDefOf.treeSkin, 25)
+            new Pair<HediffDef, float>(MyDefOf.extremeSpeed, 16.67f), new Pair<HediffDef, float>(MyDefOf.rockSkin, 16.67f), new Pair<HediffDef, float>(MyDefOf.extremePrecision, 16.67f), new Pair<HediffDef, float>(MyDefOf.treeSkin, 16.67f), new Pair<HediffDef, float>(MyDefOf.angryBrawler, 16.67f)
 
         };
 
@@ -602,14 +600,14 @@ namespace God_s_Oversight.Buildings.CreationChamber
         public static List<Pair<HediffDef, int>> Tier5M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 40),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 10), new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 40),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier6M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
 
         };
 

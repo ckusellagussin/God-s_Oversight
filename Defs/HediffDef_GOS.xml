@@ -164,13 +164,42 @@
         </stages>
         </HediffDef>
 
+        <HediffDef>
+          <defName>angryBrawler</defName>
+            <label>Bloodlust's Fury</label>
+            <labelNoun>You have obtained the power of Bloodlust's Fury, just like the runeterrian champion Tryndamere</labelNoun>
+            <description>The Bloodlust's Fury is the power to do massive melee damage however the pawn is always</description>
+              <makesSickThought>false</makesSickThought>
+              <tendable>false</tendable>
+              <makesAlert>true</makesAlert>
+              <stages>
+              <li>
+                <painOffset>0.2</painOffset>
+                <statOffsets>
+                <MeleeHitChance>60</MeleeHitChance>
+                <MentalBreakThreshold>0.2</MentalBreakThreshold>
+                </statOffsets>
+              </li>
+              </stages>
+          </HediffDef>
 
-
-
-
-
-
-
+          <HediffDef>
+            <defName>unwaveringMorale</defName>
+              <label>Unwavering Morale</label>
+              <labelNoun>You have obtained the power of Unwavering Morale, just like the best generals all over the universe</labelNoun>
+              <description>Unwavering Morale is the power of having almost unstoppable mental fortitude. This pawn always thinks about how the stars are at it's brightest in the darkest of nights however learning new skills are now an issue for the pawn</description>
+                <makesSickThought>false</makesSickThought>
+                <tendable>false</tendable>
+                <makesAlert>true</makesAlert>
+                <stages>
+                <li>
+                  <statOffsets>
+                  <MentalBreakThreshold>-0.7</MentalBreakThreshold>
+                  <GlobalLearningFactor>-0.4</GlobalLearningFactor>
+                  </statOffsets>
+                </li>
+                </stages>
+            </HediffDef>
 
 
 
@@ -283,6 +312,7 @@
       </li>
     </stages>
   </HediffDef>
+
   <HediffDef ParentName="ChronicDiseaseBase">
     <defName>Alzheimers</defName>
     <label>alzheimer's</label>
