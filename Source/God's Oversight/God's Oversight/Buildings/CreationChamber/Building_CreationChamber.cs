@@ -572,42 +572,42 @@ namespace God_s_Oversight.Buildings.CreationChamber
         public static List<Pair<HediffDef, int>> Tier1M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.Insomnia, 5), new Pair<HediffDef, int>(MyDefOf.BadBack, 20),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier2M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.extremeUnderstanding, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.Insomnia, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 30),new Pair<HediffDef, int>(MyDefOf.extremeUnderstanding, 5), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,30)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier3M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.extremeUnderstanding, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.Insomnia, 10), new Pair<HediffDef, int>(MyDefOf.extremeUnderstanding, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier4M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.BadBack, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.Insomnia, 15), new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 25),new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 15), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier5M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 10), new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 40),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 20), new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 25),new Pair<HediffDef, int>(MyDefOf.Insomnia, 30), new Pair<HediffDef, int>(MyDefOf.Blindness, 10),new Pair<HediffDef, int>(MyDefOf.HearingLoss,10)
 
         };
 
         public static List<Pair<HediffDef, int>> Tier6M = new List<Pair<HediffDef, int>>
         {
 
-            new Pair<HediffDef, int>(MyDefOf.extremeSpeed, 10), new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 15),new Pair<HediffDef, int>(MyDefOf.Frail, 25), new Pair<HediffDef, int>(MyDefOf.Blindness, 25),new Pair<HediffDef, int>(MyDefOf.HearingLoss,25)
+            new Pair<HediffDef, int>(MyDefOf.Insomnia, 15), new Pair<HediffDef, int>(MyDefOf.unwaveringMorale, 20),new Pair<HediffDef, int>(MyDefOf.extremeIntelligence, 30), new Pair<HediffDef, int>(MyDefOf.extremeUnderstanding, 30),new Pair<HediffDef, int>(MyDefOf.HearingLoss,5)
 
         };
 

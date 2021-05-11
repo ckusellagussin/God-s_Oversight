@@ -195,11 +195,31 @@
                 <li>
                   <statOffsets>
                   <MentalBreakThreshold>-0.7</MentalBreakThreshold>
-                  <GlobalLearningFactor>-0.4</GlobalLearningFactor>
+                  <GlobalLearningFactor>-0.3</GlobalLearningFactor>
                   </statOffsets>
                 </li>
                 </stages>
             </HediffDef>
+
+            <HediffDef>
+              <defName>Insomnia</defName>
+                <label>insomnia</label>
+                <labelNoun>You have obtained the power of Insomnia</labelNoun>
+                <description>This pawn has obtained the power of insomnia, This pawn rarely ever has to sleep but thier brain doesn't function has well as people who sleep everyday.</description>
+                  <makesSickThought>false</makesSickThought>
+                  <tendable>false</tendable>
+                  <makesAlert>true</makesAlert>
+                  <stages>
+                  <li>
+                    <restFallFactorOffset>0.9</restFallFactorOffset>
+                    <statOffsets>                
+                    <GlobalLearningFactor>-0.3</GlobalLearningFactor>
+                    </statOffsets>
+                  </li>
+                  </stages>
+              </HediffDef>
+
+
 
 
 
