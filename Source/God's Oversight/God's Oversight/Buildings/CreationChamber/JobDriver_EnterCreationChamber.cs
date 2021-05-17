@@ -43,14 +43,7 @@ namespace God_s_Oversight.Buildings
                 {
                     actor.DeSpawn();                   
                     chamber.TryAcceptThing(actor);                
-                    if (chamber is Building_CreationChamber creation)
-                    {
-                      //  creation.creationSystem(actor);
-
-                       
-                    }
-
-
+      
 
                 };
                
