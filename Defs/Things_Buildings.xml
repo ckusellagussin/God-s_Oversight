@@ -99,10 +99,11 @@
     <li>Make_Dnaide_Canister</li>
   </recipes>
   <graphicData>
-    <texPath>Buildings/Refiner</texPath>
+    <texPath>Buildings/Refinery</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     <shaderType>CutoutComplex</shaderType>
     <drawSize>(3,2)</drawSize>
+
     <shadowData>
       <volume>(2.22, 0.8, 0.62)</volume>
       <offset>(0, 0, -0.13)</offset>
@@ -122,5 +123,6 @@
     <researchPrerequisites>
       <li>mutancyBuildings</li>
     </researchPrerequisites>
+    <uiIconScale>0.5</uiIconScale>
 </ThingDef>
 </Defs>

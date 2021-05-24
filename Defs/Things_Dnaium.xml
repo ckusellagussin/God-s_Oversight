@@ -82,7 +82,7 @@ Now that this element has been taken away from the main vein, the Dnaium is much
   <description>This un-mined resource is what is needed to change pawns into gods or
     demons. This resource is very rare to find but supplies much needed Dnaium when found.</description>
   <graphicData>
-    <texPath>Dnaium/Dnaium_Ore</texPath>
+    <texPath>Ore/Dnaium_Ore</texPath>
     <graphicClass>Graphic_Single</graphicClass>
   </graphicData>
   <statBases>
