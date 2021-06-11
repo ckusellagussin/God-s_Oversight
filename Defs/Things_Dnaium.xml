@@ -18,6 +18,9 @@ Now that this element has been taken away from the main vein, the Dnaium is much
   <Mass>0.004</Mass>
   <MaxHitPoints>100</MaxHitPoints>
 </statBases>
+<thingCategories>
+      <li>ResourcesRaw</li>
+</thingCategories>
 <useHitPoints>True</useHitPoints>
 <healthAffectsPrice>True</healthAffectsPrice>
 <stackLimit>100</stackLimit>
@@ -55,6 +58,9 @@ Now that this element has been taken away from the main vein, the Dnaium is much
     <Mass>0.08</Mass>
     <MaxHitPoints>100</MaxHitPoints>
   </statBases>
+  <thingCategories>
+        <li>ResourcesRaw</li>
+  </thingCategories>
   <useHitPoints>True</useHitPoints>
   <healthAffectsPrice>True</healthAffectsPrice>
   <stackLimit>100</stackLimit>

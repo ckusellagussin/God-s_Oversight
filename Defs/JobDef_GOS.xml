@@ -8,7 +8,7 @@
   </JobDef>
 
   <WorkGiverDef>
-    <defName>DoBillsRefinery</defName>
+    <defName>DoBillsDnaiumRefinery</defName>
     <label>work at dnaium refinery</label>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Crafting</workType>
