@@ -67,7 +67,7 @@ namespace God_s_Oversight.Buildings.CreationChamber
             Action action = delegate
             {
                 Job job = JobMaker.MakeJob(jobDef, this);
-                mypawn.jobs.TryTakeOrderedJob(job);
+                mypawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
 
             };
 
