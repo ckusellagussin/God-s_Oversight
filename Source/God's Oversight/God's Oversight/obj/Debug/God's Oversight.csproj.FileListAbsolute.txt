@@ -3,6 +3,6 @@ C:\Users\Casey\Documents\GitHub\God-s_Oversight\Source\God's Oversight\God's Ove
 C:\Users\Casey\Documents\GitHub\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.csproj.CoreCompileInputs.cache
 C:\Users\Casey\Documents\GitHub\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.dll
 D:\Steam\steamapps\common\RimWorld\Mods\God-s_Oversight\Assemblies\God's Oversight.dll
-D:\Steam\steamapps\common\RimWorld\Mods\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.csprojAssemblyReference.cache
 D:\Steam\steamapps\common\RimWorld\Mods\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.csproj.CoreCompileInputs.cache
 D:\Steam\steamapps\common\RimWorld\Mods\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.dll
+D:\Steam\steamapps\common\RimWorld\Mods\God-s_Oversight\Source\God's Oversight\God's Oversight\obj\Debug\God's Oversight.csprojAssemblyReference.cache

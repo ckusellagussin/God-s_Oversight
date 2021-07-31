@@ -15,7 +15,9 @@
       <Flammability>10.0</Flammability>
       <DeteriorationRate>20</DeteriorationRate>
     </statBases>
-    <alwaysHaulable>true</alwaysHaulable>
+    <thingCategories>
+          <li>Items</li>
+    </thingCategories>
   <stackLimit>1</stackLimit>
   </ThingDef>
 </Defs>
