@@ -18,7 +18,7 @@
   <statBases>
     <MaxHitPoints>300</MaxHitPoints>
     <WorkToBuild>3500</WorkToBuild>
-    <Mass>100</Mass>
+    <Mass>300</Mass>
     <Flammability>5.0</Flammability>
     <BedRestEffectiveness>0.2</BedRestEffectiveness>
     <Comfort>0.2</Comfort>
@@ -70,7 +70,7 @@
 
 <ThingDef ParentName="BenchBase">
   <defName>canisterRefiner</defName>
-  <label>Canister Refiner</label>
+  <label>Dnaium Refiner</label>
   <description>A refiner specifically for turning pure dnaium into a Dnaide Canister</description>
   <thingClass>Building_WorkTable</thingClass>
   <altitudeLayer>Building</altitudeLayer>
