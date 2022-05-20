@@ -3,7 +3,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>DnaideCanister</defName>
     <label>Dnaide Canister</label>
-    <description>This canister has been refactored into a gas so it can be entered into the human body through the chamber. There is no going back once this has entered into the body, this is the safest way but there are is no guarantee of godhood</description>
+    <description>This canister has been refactored into a gas so it can be entered into the human body through the chamber. There is no going back once this has entered into the body, this is the safest way but there is no guarantee of godhood</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Items/Dnaide_Canister</texPath>
